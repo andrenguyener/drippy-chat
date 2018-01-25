@@ -1,0 +1,341 @@
+/* Variables */
+/* General */
+html, body {
+  background-color: #242A32;
+  font-family: Helvetica, sans-serif !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 200; }
+
+#router-paths, .login-form, .App, #root, body, html {
+  height: 100%; }
+
+.error-message {
+  color: #DDDEDF; }
+
+input {
+  outline-color: black !important;
+  background: #FBFCFC !important;
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 200 !important; }
+
+.button {
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 200 !important; }
+
+/* Login Screen */
+.App .red-text {
+  color: #DDDEDF; }
+
+.App .red-button {
+  background-color: #DDDEDF; }
+
+.App .green-button {
+  background-color: #606C79;
+  color: #EEF0F3;
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 300 !important; }
+  .App .green-button:hover, .App .green-button:focus {
+    background-color: #DDDEDF;
+    color: #606C79; }
+
+.App .brown-form .segment {
+  background-color: #242A32;
+  background: #242A32;
+  color: #242A32; }
+
+.App .lightbrown-message {
+  background: #DDDEDF;
+  color: #606C79;
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 300 !important; }
+
+.App .header {
+  color: #DDDEDF;
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 300 !important; }
+
+.App .icon-logo {
+  position: absolute;
+  right: 50%;
+  margin-right: 25px; }
+
+.App .login-form a {
+  color: #242A32;
+  font-weight: 400 !important; }
+
+.App .login-form .grid {
+  margin: 0px 0px; }
+
+.App .login-form .column {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+/* Main Screen */
+#screen-view {
+  height: 100%;
+  padding-bottom: 0px;
+  padding-top: 0px; }
+
+#grid {
+  height: 100%;
+  width: 100%;
+  margin: 0px 0px;
+  display: inline-block; }
+
+.pusher {
+  height: 100%; }
+
+/* Main Sidebar */
+.App #main-sidebar-container {
+  background-color: #242A32;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px; }
+  .App #main-sidebar-container .icon {
+    margin-right: 15px; }
+  .App #main-sidebar-container .item {
+    text-align: left;
+    color: #83878B;
+    font-weight: 200; }
+  .App #main-sidebar-container > .item {
+    border-bottom-style: solid;
+    border-bottom-color: #2D343B;
+    border-bottom-width: 1px; }
+  .App #main-sidebar-container .ui .item:hover {
+    color: #DDDEDF; }
+  .App #main-sidebar-container h3 {
+    margin-top: 0; }
+  .App #main-sidebar-container .list {
+    margin-top: 0px;
+    margin-left: 2em;
+    font-size: 1.2em; }
+  .App #main-sidebar-container .active-channel {
+    color: #DDDEDF; }
+
+.App .sidebar-title {
+  display: flex;
+  color: #DDDEDF; }
+  .App .sidebar-title h2 {
+    margin-top: 0px; }
+
+.App .full-height {
+  height: 100%; }
+
+.App .segment {
+  background-color: #EEF0F3; }
+
+.App .channel-plus, .App .edit-pencil {
+  margin-right: 0px !important;
+  margin-left: auto;
+  cursor: pointer; }
+  .App .channel-plus:hover, .App .edit-pencil:hover {
+    color: #DDDEDF; }
+
+.App .button-signout {
+  position: fixed;
+  bottom: 0px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #83878B;
+  padding: 10px 15px; }
+  .App .button-signout:hover, .App .button-signout:focus {
+    color: #DDDEDF;
+    cursor: pointer; }
+
+.sidebar-name {
+  margin-top: 30px;
+  display: flex; }
+  .sidebar-name h3 {
+    margin-bottom: 0px; }
+
+.sidebar-channel {
+  display: flex; }
+
+#nav-section {
+  height: 100%;
+  width: 210px;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+/* Mobile Sidebar */
+.App #main-sidebar-container-mobile {
+  background-color: #242A32;
+  width: 200px; }
+  @media (min-width: 768px) {
+    .App #main-sidebar-container-mobile {
+      display: none; } }
+  .App #main-sidebar-container-mobile .item {
+    text-align: left;
+    color: #83878B;
+    font-weight: 200; }
+  .App #main-sidebar-container-mobile > .item {
+    border-bottom-style: solid;
+    border-bottom-color: #2D343B;
+    border-bottom-width: 1px; }
+  .App #main-sidebar-container-mobile .ui .item:hover {
+    color: #DDDEDF; }
+  .App #main-sidebar-container-mobile .list {
+    margin-top: 0px;
+    margin-left: 2em;
+    font-size: 1.2em; }
+  .App #main-sidebar-container-mobile .icon {
+    float: left;
+    margin-right: 15px; }
+  .App #main-sidebar-container-mobile .active-channel {
+    color: #DDDEDF; }
+
+@media (max-width: 768px) {
+  .App .ui.visible.thin.left.sidebar ~ .fixed, .App .ui.visible.thin.left.sidebar ~ .pusher {
+    transform: translate3d(200px, 0, 0); } }
+
+@media (min-width: 768px) {
+  .App .ui.visible.thin.left.sidebar ~ .fixed, .App .ui.visible.thin.left.sidebar ~ .pusher {
+    transform: translate3d(0px, 0, 0); } }
+
+/* Modal Channel */
+.modal-channel {
+  height: auto;
+  padding: 60px 70px;
+  background: #242A32 !important;
+  font-family: Helvetica, sans-serif !important;
+  font-weight: 200 !important;
+  color: #DDDEDF; }
+  .modal-channel .header {
+    font-weight: 400 !important;
+    color: #DDDEDF; }
+  .modal-channel .modal-form {
+    display: initial !important; }
+  .modal-channel .modal-form-field {
+    margin-bottom: 20px !important; }
+    .modal-channel .modal-form-field label {
+      color: #DDDEDF !important;
+      font-weight: 400 !important; }
+
+.close {
+  color: #DDDEDF !important; }
+
+.actions {
+  background: #242A32 !important;
+  font-family: Helvetica, sans-serif !important; }
+  .actions .button {
+    font-weight: 200 !important; }
+    .actions .button:hover {
+      color: #242A32 !important;
+      background-color: #DDDEDF !important; }
+  .actions .darkblue {
+    color: #EEF0F3;
+    background-color: #606C79 !important; }
+    .actions .darkblue:hover {
+      color: #606C79;
+      background-color: #DDDEDF !important; }
+
+/* Message Section */
+.App #message-section {
+  max-height: 100%;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px !important;
+  margin-left: 0px !important; }
+  @media (min-width: 768px) {
+    .App #message-section {
+      width: calc(100% - 210px); } }
+
+.App #message-section > .input, .App #message-section > .container {
+  flex-grow: 0; }
+
+/* Message Header */
+.App #message-header {
+  width: auto;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  border-width: 1px;
+  border-bottom-color: lightgrey;
+  border-bottom-style: solid;
+  background-color: #EEF0F3;
+  color: #242A32;
+  font-weight: 200 !important; }
+  .App #message-header h3 {
+    margin-top: 0px; }
+
+.App #channel-header {
+  display: flex;
+  color: #83878B; }
+  .App #channel-header p {
+    cursor: pointer; }
+    .App #channel-header p:hover {
+      color: #242A32; }
+  .App #channel-header #description-edit-icon {
+    margin-left: 5px; }
+    .App #channel-header #description-edit-icon:hover {
+      color: #242A32; }
+
+.App .hamburger-bar {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 15px;
+  font-size: 2em;
+  color: #242A32; }
+
+.App #ellipsis-vertical {
+  position: fixed;
+  right: 0px;
+  top: 15px;
+  cursor: pointer;
+  color: #83878B; }
+  .App #ellipsis-vertical:hover, .App #ellipsis-vertical:focus {
+    color: #242A32; }
+  @media (min-width: 768px) {
+    .App #ellipsis-vertical {
+      top: 25px; } }
+
+/* Message Main */
+.App #message-main {
+  height: 100%;
+  width: auto;
+  overflow-y: scroll;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  padding-left: 25px;
+  padding-right: 15px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  display: flex;
+  flex-direction: column-reverse; }
+
+.App .message-list:first-child {
+  padding-top: 20px; }
+
+/* Message Input */
+.App #message-section > .input {
+  background-color: #EEF0F3;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  bottom: 0px;
+  width: 100%;
+  position: fixed; }
+  @media (min-width: 768px) {
+    .App #message-section > .input {
+      width: calc(100% - 210px); } }
+  .App #message-section > .input .button {
+    background-color: #606C79;
+    color: #EEF0F3; }
+    .App #message-section > .input .button:hover, .App #message-section > .input .button:focus, .App #message-section > .input .button:active {
+      background-color: #242A32; }
+
+/* Pop up */
+.popup {
+  background: #EEF0F3 !important;
+  max-width: 300px !important; }
+  .popup .button {
+    color: #EEF0F3;
+    background: #606C79; }
+    .popup .button:active, .popup .button:focus, .popup .button:hover {
+      background: #242A32 !important;
+      color: white !important; }

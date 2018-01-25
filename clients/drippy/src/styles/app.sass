@@ -1,0 +1,392 @@
+/* Variables */
+
+@import 'include-media/dist/_include-media.scss'
+
+$darkblue: #242A32 
+$blue: #606C79 
+$darkgrey: #2D343B 
+$grey: #83878B 
+$lightgrey: #EEF0F3 
+$verylightgrey:  #DDDEDF
+$breakpoints: (small: 320px, medium: 768px, large: 1024px);
+
+
+/* General */
+
+html, body
+    background-color: $darkblue
+    font-family: Helvetica, sans-serif !important
+
+h1, h2, h3, h4, h5, h6
+    font-family: Helvetica, sans-serif !important
+    font-weight: 200
+    
+#router-paths, .login-form, .App, #root, body, html
+    height: 100%
+
+.error-message
+    color: $verylightgrey
+
+input
+    outline-color: black !important
+    background: #FBFCFC !important
+    font-family: Helvetica, sans-serif !important
+    font-weight: 200 !important
+    &:focus
+        // background: #f7eee5 !important
+
+.button
+    font-family: Helvetica, sans-serif !important
+    font-weight: 200 !important
+
+/* Login Screen */
+
+.App
+    .red-text
+        color: $verylightgrey
+
+    .red-button
+        background-color: $verylightgrey
+
+    .green-button
+        background-color: $blue
+        color: $lightgrey
+        font-family: Helvetica, sans-serif !important
+        font-weight: 300 !important
+        &:hover, &:focus
+            background-color: $verylightgrey
+            color: $blue
+
+    .brown-form .segment
+        background-color: $darkblue
+        background: $darkblue
+        color: $darkblue
+
+    .lightbrown-message
+        background: $verylightgrey
+        color: $blue
+        font-family: Helvetica, sans-serif !important
+        font-weight: 300 !important
+
+    
+    .header
+        color: $verylightgrey
+        font-family: Helvetica, sans-serif !important
+        font-weight: 300 !important
+
+    .icon-logo
+        position: absolute
+        right: 50%
+        margin-right: 25px
+    
+    .login-form
+        a
+            color: $darkblue
+            font-weight: 400 !important
+        .grid
+            margin: 0px 0px
+        .column
+            margin-top: auto
+            margin-bottom: auto
+    
+/* Main Screen */
+
+#screen-view
+    height: 100%
+    padding-bottom: 0px
+    padding-top: 0px
+
+#grid
+    height: 100%
+    width: 100%
+    margin: 0px 0px
+    display: inline-block
+
+.pusher
+    height: 100%
+
+/* Main Sidebar */
+
+.App
+    #main-sidebar-container
+        background-color: $darkblue
+        height: 100%
+        width: 100%
+        border-radius: 0px
+
+        .icon
+            margin-right: 15px
+
+        .item
+            text-align: left
+            color: $grey
+            font-weight: 200
+
+
+        > .item
+            border-bottom-style: solid
+            border-bottom-color: $darkgrey
+            border-bottom-width: 1px
+
+        .ui .item
+            &:hover
+                color: $verylightgrey
+ 
+        h3
+            margin-top: 0
+        .list
+            margin-top: 0px
+            margin-left: 2em
+            font-size: 1.2em
+
+        .active-channel
+            color: $verylightgrey
+            
+    .sidebar-title
+        display: flex
+        color: $verylightgrey
+        h2
+            margin-top: 0px
+
+    .full-height
+        height: 100%
+    
+    .segment
+       background-color: $lightgrey
+
+    .channel-plus, .edit-pencil
+        margin-right: 0px !important
+        margin-left: auto 
+        cursor: pointer
+        &:hover
+            color: $verylightgrey
+    .button-signout
+        position: fixed
+        bottom: 0px
+        margin-bottom: 10px
+        margin-right: 10px
+        color: $grey
+        padding: 10px 15px
+        &:hover, &:focus
+            color: $verylightgrey
+            cursor: pointer
+
+
+.sidebar-name
+    margin-top: 30px
+    display: flex
+    h3
+        margin-bottom: 0px
+
+.sidebar-channel
+    display: flex
+
+#nav-section
+    height: 100%
+    width: 210px
+    padding-left: 0px
+    padding-right: 0px
+
+/* Mobile Sidebar */
+
+.App
+    #main-sidebar-container-mobile
+        background-color: $darkblue
+        width: 200px
+        @include media(">=medium")
+            display: none
+
+        .item
+            text-align: left
+            color: $grey
+            font-weight: 200
+
+        > .item
+            border-bottom-style: solid
+            border-bottom-color: $darkgrey
+            border-bottom-width: 1px
+
+        .ui .item
+            &:hover
+                color: $verylightgrey
+
+        .list
+            margin-top: 0px
+            margin-left: 2em
+            font-size: 1.2em
+
+        .icon
+            float: left
+            margin-right: 15px
+
+        .active-channel
+            color: $verylightgrey
+
+    @include media("<=medium")
+        .ui.visible.thin.left.sidebar~.fixed, .ui.visible.thin.left.sidebar~.pusher
+            transform: translate3d(200px, 0, 0)
+    @include media(">=medium")
+        .ui.visible.thin.left.sidebar~.fixed, .ui.visible.thin.left.sidebar~.pusher
+            transform: translate3d(0px, 0, 0)
+    
+
+/* Modal Channel */
+
+.modal-channel
+    height: auto 
+    padding: 60px 70px
+    background: $darkblue !important
+    font-family: Helvetica, sans-serif !important
+    font-weight: 200 !important
+    color: $verylightgrey
+    .header
+        font-weight: 400 !important
+        color: $verylightgrey
+
+    .modal-form
+        display: initial !important
+
+    .modal-form-field
+        margin-bottom: 20px !important
+        
+        label
+            color: $verylightgrey !important
+            font-weight: 400 !important
+
+
+.close
+    color: $verylightgrey !important
+
+.actions
+    background: $darkblue !important
+    font-family: Helvetica, sans-serif !important
+    
+    .button
+        font-weight: 200 !important
+        &:hover
+            color: $darkblue !important
+            background-color: $verylightgrey !important
+    .darkblue
+        color: $lightgrey
+        background-color: $blue !important
+        &:hover
+            color: $blue
+            background-color: $verylightgrey !important
+
+/* Message Section */
+
+.App
+    #message-section
+        max-height: 100%
+        width: 100%
+        padding-left: 0px
+        padding-right: 0px
+        margin-right: 0px !important
+        margin-left: 0px !important
+        @include media(">=medium") 
+            width: calc(100% - 210px)
+
+    #message-section > .input, #message-section > .container
+        flex-grow: 0
+
+/* Message Header */
+
+.App
+    #message-header
+        width: auto
+        margin-left: 0px !important
+        margin-right: 0px !important
+        padding-top: 15px
+        padding-bottom: 10px
+        padding-left: 25px
+        border-width: 1px
+        border-bottom-color: lightgrey
+        border-bottom-style: solid
+        background-color: $lightgrey
+        color: $darkblue
+        font-weight: 200 !important
+        h3
+            margin-top: 0px
+    #channel-header
+        display: flex
+        color: $grey
+        p
+            cursor: pointer
+            &:hover
+                color: $darkblue
+        #description-edit-icon
+            margin-left: 5px
+            &:hover
+                color: $darkblue
+    .hamburger-bar
+        margin-top: 0px
+        margin-left: 0px
+        margin-right: 15px
+        font-size: 2em
+        color: $darkblue
+
+    #ellipsis-vertical
+        position: fixed
+        right: 0px
+        top: 15px
+        cursor: pointer
+        color: $grey
+        &:hover, &:focus
+            color: $darkblue
+        @include media(">=medium")
+            top: 25px
+
+    #description-edit-icon
+     
+/* Message Main */
+
+.App
+    #message-main
+        height: 100%
+        width: auto
+        overflow-y: scroll
+        padding-top: 20px
+        padding-bottom: 70px
+        padding-left: 25px
+        padding-right: 15px
+        margin-right: 0px !important
+        margin-left: 0px !important
+        display: flex
+        flex-direction: column-reverse
+    .message-list
+        &:first-child
+            padding-top: 20px
+
+
+/* Message Input */
+
+.App
+    #message-section > .input
+        background-color: $lightgrey
+        padding-left: 25px
+        padding-right: 25px
+        padding-bottom: 10px
+        bottom: 0px
+        width: 100%
+        position: fixed
+        @include media(">=medium")
+            width: calc(100% - 210px)
+
+        .button
+            background-color: $blue
+            color: $lightgrey
+            &:hover, &:focus, &:active
+                background-color: $darkblue
+
+/* Pop up */
+
+.popup
+    background: $lightgrey !important
+    max-width: 300px !important
+    .button
+        color: $lightgrey
+        background: $blue
+        &:active, &:focus, &:hover 
+            background: $darkblue !important
+            color: white !important
+        

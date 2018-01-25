@@ -1,0 +1,38 @@
+{
+  "name": "drippy",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://andrenguyener.github.io/drippy-chat",
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "react-scripts": "1.1.0",
+    "npm-run-all": "^4.0.2"
+  },
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "include-media": "^1.4.9",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-moment": "^0.7.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.2",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
