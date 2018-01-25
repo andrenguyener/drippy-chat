@@ -2,7 +2,7 @@
   "name": "drippy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andrenguyener.github.io/drippy-chat",
+  "homepage": "http://drippy.club",
   "devDependencies": {
     "node-sass-chokidar": "0.0.3",
     "react-scripts": "1.1.0",
