@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Icon, List, Sidebar, Segment, Button, Input, Grid, Modal, Header, Form, Responsive, Popup, Comment} from 'semantic-ui-react';
 import Container from 'semantic-ui-react/dist/commonjs/elements/Container/Container';
-import SidebarPusher from 'semantic-ui-react/dist/commonjs/modules/Sidebar/Sideba;rPusher'
+import SidebarPusher from 'semantic-ui-react/dist/commonjs/modules/Sidebar/SidebarPusher'
 import "whatwg-fetch";
 import Moment from 'react-moment';
 import 'moment-timezone';
@@ -399,6 +399,7 @@ class Messages extends Component {
         
         if(this.state.messages[this.state.currentChannel._id]) {
             messageList = this.state.messages[this.state.currentChannel._id].map(message =>
+        
                 <Comment>
                     <Comment.Avatar src={message.creator.photoURL + "?d=monsterid"}  />
                     <Comment.Content>
@@ -411,6 +412,7 @@ class Messages extends Component {
                   </Comment>
             );
         }
+        console.log(this.state)
 
         let nav =  <Menu vertical icon='labeled' id='main-sidebar-container'>
 
