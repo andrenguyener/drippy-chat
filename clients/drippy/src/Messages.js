@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Icon, List, Sidebar, Segment, Button, Input, Grid, Modal, Header, Form, Responsive, Popup, Comment} from 'semantic-ui-react';
 import Container from 'semantic-ui-react/dist/commonjs/elements/Container/Container';
-import SidebarPusher from 'semantic-ui-react/dist/commonjs/modules/Sidebar/SidebarPusher';
+import SidebarPusher from 'semantic-ui-react/dist/commonjs/modules/Sidebar/Sideba;rPusher'
 import "whatwg-fetch";
 import Moment from 'react-moment';
 import 'moment-timezone';
@@ -534,57 +534,57 @@ class Messages extends Component {
             </Sidebar>
     
             <SidebarPusher>
-            <Grid id="grid">
-                <Grid.Row fluid="true" id="screen-view" stretched>
-                    <Responsive minWidth={768} style={{width: "210px"}}>
-                        <Grid.Column id="nav-section" stretched>
-                            {nav}
-                        </Grid.Column>
-                    </Responsive>
-                    
-                    <Grid.Column id="message-section">
-                        <Container id="message-header">
-                            <div style={{display: "flex"}}>
-                            <Responsive maxWidth={767}><Icon name="bars" className="hamburger-bar" onClick={this.toggleVisibility}/></Responsive>
-                                <h3>#{this.state.currentChannel.name} </h3>
-                            </div>
-
-                           
-                            <Responsive minWidth={768}>
-                                <div id="channel-header">      
-                                    {/* <Icon name='users' />   */}
-                                    <Popup
-                                        trigger={<p> {this.state.currentChannel.description === '' ? "Add a topic" : this.state.currentChannel.description}<Icon id="description-edit-icon" size="small" name='pencil' /></p>}
-                                        content={<Input action={{content: "Edit", onClick: this.handleEditDescription}} placeholder={this.state.currentChannel.description === '' ? "Add a topic" : this.state.currentChannel.description} name="inputEditDescription" value={this.state.inputEditDescription} onChange={this.handleChange}/>}
-
-                                        on='click'
-                                    />
+                <Grid id="grid">
+                    <Grid.Row fluid="true" id="screen-view" stretched>
+                        <Responsive minWidth={768} style={{width: "210px"}}>
+                            <Grid.Column id="nav-section" stretched>
+                                {nav}
+                            </Grid.Column>
+                        </Responsive>
+                        
+                        <Grid.Column id="message-section">
+                            <Container id="message-header">
+                                <div style={{display: "flex"}}>
+                                <Responsive maxWidth={767}><Icon name="bars" className="hamburger-bar" onClick={this.toggleVisibility}/></Responsive>
+                                    <h3>#{this.state.currentChannel.name} </h3>
                                 </div>
-                            </Responsive>
-                            <Popup
-                                trigger={<Icon name='ellipsis vertical' id="ellipsis-vertical" size="big"/>}
-                                content={<Button content='Delete Channel' onClick={this.handleDeleteChannel}/>}
-                                open={this.state.popupOpen}
-                                onOpen={this.handleOpen}
-                                onClose={this.handleClose}
-                                on='click'
-                            />
+
                             
-                        </Container>
-                        <Container id="message-main">
-                            <Comment.Group>
-                            {/* <List className="message-list" relaxed='very'> */}
-                                {messageList}
-                            {/* </List> */}
-                            </Comment.Group>
-                        </Container>
-                        <Input id="message-input" fluid type='text' placeholder='Message' action>
-                            <input name="inputMessage" value={this.state.inputMessage} onChange={this.handleChange} onKeyDown={e => this.pressKeyDown(e)}/>
-                            <Button type='submit' onClick={this.handleNewMessage}>+</Button>
-                        </Input>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+                                <Responsive minWidth={768}>
+                                    <div id="channel-header">      
+                                        {/* <Icon name='users' />   */}
+                                        <Popup
+                                            trigger={<p> {this.state.currentChannel.description === '' ? "Add a topic" : this.state.currentChannel.description}<Icon id="description-edit-icon" size="small" name='pencil' /></p>}
+                                            content={<Input action={{content: "Edit", onClick: this.handleEditDescription}} placeholder={this.state.currentChannel.description === '' ? "Add a topic" : this.state.currentChannel.description} name="inputEditDescription" value={this.state.inputEditDescription} onChange={this.handleChange}/>}
+
+                                            on='click'
+                                        />
+                                    </div>
+                                </Responsive>
+                                <Popup
+                                    trigger={<Icon name='ellipsis vertical' id="ellipsis-vertical" size="big"/>}
+                                    content={<Button content='Delete Channel' onClick={this.handleDeleteChannel}/>}
+                                    open={this.state.popupOpen}
+                                    onOpen={this.handleOpen}
+                                    onClose={this.handleClose}
+                                    on='click'
+                                />
+                                
+                            </Container>
+                            <Container id="message-main">
+                                <Comment.Group>
+                                {/* <List className="message-list" relaxed='very'> */}
+                                    {messageList}
+                                {/* </List> */}
+                                </Comment.Group>
+                            </Container>
+                            <Input id="message-input" fluid type='text' placeholder='Message' action>
+                                <input name="inputMessage" value={this.state.inputMessage} onChange={this.handleChange} onKeyDown={e => this.pressKeyDown(e)}/>
+                                <Button type='submit' onClick={this.handleNewMessage}>+</Button>
+                            </Input>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
             </SidebarPusher>
         </Sidebar.Pushable>
         );

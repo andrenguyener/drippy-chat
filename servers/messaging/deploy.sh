@@ -4,6 +4,6 @@ chmod +x build.sh
 chmod +x provision.sh
 docker push andrenguyener/messaging
 
-ssh root@162.243.165.145 'bash -s' < provision.sh
+ssh root@159.89.141.71 'bash -s' < provision.sh
 
 
