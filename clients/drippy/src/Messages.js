@@ -399,8 +399,8 @@ class Messages extends Component {
         
         if(this.state.messages[this.state.currentChannel._id]) {
             messageList = this.state.messages[this.state.currentChannel._id].map(message =>
-        
-                <Comment>
+              
+                <Comment key={message._id}>
                     <Comment.Avatar src={message.creator.photoURL + "?d=monsterid"}  />
                     <Comment.Content>
                       <Comment.Author as='a'>{message.creator.firstName}</Comment.Author>
@@ -412,7 +412,7 @@ class Messages extends Component {
                   </Comment>
             );
         }
-        console.log(this.state)
+
 
         let nav =  <Menu vertical icon='labeled' id='main-sidebar-container'>
 

@@ -100,7 +100,7 @@ class SignIn extends Component {
                         <Message className="lightbrown-message">
                            New to us? <Link to="/signup"> Sign Up </Link>
                         </Message>
-                            <h5 className="error-message">{this.state.err}</h5>
+                            <h5 className="error-message">{this.state.error}</h5>
                     </Grid.Column>
                 </Grid>
  
